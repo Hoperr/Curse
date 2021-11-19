@@ -1,0 +1,20 @@
+﻿<Window x:Class="Curse.Menu" WindowStartupLocation="CenterScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Curse"
+        mc:Ignorable="d"
+        Title="Меню" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid Background="#71AEFB">
+
+        <Label Content="Туристическая фирма" HorizontalAlignment="Left" Margin="174,28,0,0" VerticalAlignment="Top" Height="64" Width="445" FontSize="40" FontWeight="Bold"/>
+        <Button x:Name="KlientsButton" Content="Список клиентов" HorizontalAlignment="Left" Margin="259,120,0,0" VerticalAlignment="Top" Width="266" Height="34" FontSize="20" Click="KlientsButton_Click"/>
+        <Button x:Name="HotelsButton" Content="Список отелей " HorizontalAlignment="Left" Margin="259,185,0,0" VerticalAlignment="Top" Width="266" Height="34" FontSize="20" Click="HotelsButton_Click"/>
+        <Button x:Name="ToursButton" Content="Список туров " HorizontalAlignment="Left" Margin="259,245,0,0" VerticalAlignment="Top" Width="266" Height="34" FontSize="20" Click="ToursButton_Click"/>
+        <Button x:Name="OrdersButton" Content="Список заказов " HorizontalAlignment="Left" Margin="259,301,0,0" VerticalAlignment="Top" Width="266" Height="34" FontSize="20" Click="OrdersButton_Click"/>
+        <Button x:Name="AdminStaffListButton" Content="Список сотрудников" Visibility="Visible"  HorizontalAlignment="Left" Margin="259,357,0,0" VerticalAlignment="Top" Width="266" Height="34" FontSize="20" Click="AdminStaffListButton_Click"/>
+        <Button x:Name="ExitButton" Content="Выйти&#xD;&#xA;" HorizontalAlignment="Left" Margin="651,364,0,0" VerticalAlignment="Top" Width="114" Height="32" Click="ExitButton_Click" FontSize="20"/>
+
+    </Grid>
+</Window>

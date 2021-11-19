@@ -1,0 +1,40 @@
+﻿<Window x:Class="Curse.HotelWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Curse"
+        mc:Ignorable="d"
+        Title="Отели" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <ListView x:Name="LVHotels" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Center" Margin="0,46,-0.4,50">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center" />
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid MaxWidth="500" MinWidth="550">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="70"/>
+                            <RowDefinition Height="310"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Image Width="400" Grid.Row="1" HorizontalAlignment="Center" Margin="5" Source="{Binding HotelImage}"/>
+                        <TextBlock Text="{Binding Name}" VerticalAlignment="Center"  TextAlignment="Justify" TextWrapping="Wrap" HorizontalAlignment="Center" FontSize="22" FontWeight="Heavy" Grid.Row="0"/>
+                        <TextBlock Text="{Binding Price, StringFormat={}Стоимость: {0:N2} Руб}" FontWeight="Bold" HorizontalAlignment="Center" Margin="5 5 5 15" FontSize="20" Grid.Row="2"/>
+                        <TextBlock Text="{Binding CountOfStars, StringFormat={}Количество Звезд: {0}}" HorizontalAlignment="Right" FontSize="14" Grid.Row="3"/>
+
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="0 10 0 0" HorizontalAlignment="Center">
+            <TextBlock Text="Введите ID для поиска" FontSize="20" Margin="5 5 5 5" />
+            <TextBox x:Name="TBhotelSearch" Width="175" Height="24" VerticalAlignment="Center" TextChanged="TBhotelSearch_TextChanged"/>
+        </StackPanel>
+        <Button x:Name="HotelExitButton" Content="Назад"  VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,10,9.6,0" Width="75" FontSize="15" FontFamily="Назад" Click="HotelExitButton_Click"/>
+    </Grid>
+</Window>

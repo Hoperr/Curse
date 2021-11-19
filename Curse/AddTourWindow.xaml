@@ -1,0 +1,25 @@
+﻿<Window x:Class="Curse.AddTourWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Curse"
+        mc:Ignorable="d"
+        Title="AddTourWindow" Height="250" Width="300" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TextBlock Text="Дата тура" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="28,24,0,0" Height="27" Width="59"/>
+        <TextBlock Text="Цена" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="28,50,0,10" Height="27" Width="59"/>
+        <TextBlock Text="Страна" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="28,76,0,0" Height="27" Width="62"/>
+        <TextBlock Text="Место назначения" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="28,102,0,0" Height="27" Width="103"/>
+        <TextBlock Text="Название отеля" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="28,128,0,0" Height="27" Width="103"/>
+        
+        <TextBox x:Name="TBDateOfTour" Text="{Binding DateOfTour}" HorizontalAlignment="Left" Height="21" Margin="149,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"></TextBox>
+        <TextBox x:Name="TBTourPrice" Text="{Binding Price}" HorizontalAlignment="Left" Height="21" Margin="149,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"></TextBox>
+        <TextBox x:Name="TBCountry" Text="{Binding Country}" HorizontalAlignment="Left" Height="21" Margin="149,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"></TextBox>
+        <TextBox x:Name="TBTown" Text="{Binding Town}" HorizontalAlignment="Left" Height="21" Margin="149,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"></TextBox>
+        <TextBox x:Name="TBHotelName" Text="{Binding TourHotelID}" HorizontalAlignment="Left" Height="21" Margin="149,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"></TextBox>
+
+        <Button x:Name="AddTour" Content="Сохранить" HorizontalAlignment="Left" Margin="10,0,0,10" VerticalAlignment="Bottom" Width="75" Click="AddTour_Click"/>
+        <Button x:Name="Tourback" Content="Вернуться" HorizontalAlignment="Right" Margin="0,0,9.6,10" VerticalAlignment="Bottom" Width="75" Click="Tourback_Click"/>
+    </Grid>
+</Window>
